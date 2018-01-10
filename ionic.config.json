@@ -1,0 +1,8 @@
+{
+  "name": "HotPlaces",
+  "app_id": "18952782",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
