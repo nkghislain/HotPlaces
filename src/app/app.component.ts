@@ -3,7 +3,18 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import * as firebase from 'firebase';
 import { HomePage } from '../pages/home/home';
+
+const config = {
+  apiKey: 'AIzaSyBBMbeFFttMi20dV8mMprUyStUnGV1xYBw',
+  authDomain: 'hotplaces-68b46.firebaseio.com',
+  databaseURL: 'https://hotplaces-68b46.firebaseio.com/',
+  projectId: 'hotplaces-68b46',
+  storageBucket: 'gs://hotplaces-68b46.firebaseio.com',
+};
+
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -17,6 +28,7 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+    firebase.initializeApp(config);
   }
 }
 
